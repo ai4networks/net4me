@@ -1,0 +1,15 @@
+[manager.ovs]
+sudo = false
+
+[manager.dind]
+host = "unix:///var/run/docker.sock"
+image = "ghcr.io/willfantom/nv-dind:v26.0-12.5.0"
+command = ["dind", "dockerd", "--host=unix:///var/run/docker.sock"]
+alwaysPull = false
+
+[influx]
+address = "http://127.0.0.1:8086"
+org = "ai4me"
+bucket = "stats4me-default"
+token = "this15asecuret0kenandisnowlongenough"
+interval = 10
